@@ -1,27 +1,29 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/placeholder-image-1.png"
+import IMG1 from "../../assets/placeholder-image.png"
+import IMG2 from "../../assets/placeholder-image-1.png"
+import IMG3 from "../../assets/placeholder-image-2.png"
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
+    title: "Tasty Blog",
+    github: "https://github.com/JureSeselj/tasty_blog",
     demo: "https://github.com",
   },
   {
     id: 2,
-    image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
+    image: IMG2,
+    title: "Harmonize App",
+    github: "https://github.com/JureSeselj/harmonize",
     demo: "https://github.com",
   },
   {
     id: 3,
-    image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
+    image: IMG3,
+    title: "Explore The World",
+    github: "https://github.com/JureSeselj/explore-the-world",
     demo: "https://github.com",
   },
 ];
@@ -40,10 +42,10 @@ const Portfolio = () => {
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn">
-                  Github
+                <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
+                  GitHub
                 </a>
-                <a href={demo} className="btn btn-primary">
+                <a href={demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                   Live Demo
                 </a>
               </div>
