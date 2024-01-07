@@ -1,6 +1,6 @@
 import React from "react";
 import "./testimonials.css";
-import AVTR1 from "../../assets/jure.png"
+import AVTR1 from "../../assets/profile3.png"
 
 // import required modules
 import { Pagination } from "swiper/modules";

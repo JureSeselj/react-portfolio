@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import jure from "../../assets/jure.png";
+import profile_picture from "../../assets/profile3.png";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
@@ -13,7 +13,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={jure} alt="About Jure image" />
+            <img src={profile_picture} alt="About Jure image" />
           </div>
         </div>
         <div className="about__content">
@@ -35,10 +35,17 @@ const About = () => {
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sint
-            dignissimos cum tempora reprehenderit, laboriosam, porro omnis aut
-            perferendis at corporis autem expedita odio assumenda perspiciatis
-            deleniti amet hic nam?
+          Hello, I'm Jure Seselj, a budding full stack developer fueled by a relentless curiosity 
+          for technology and a passion for crafting elegant digital solutions. 
+          As a recent entrant into the world of web development, my journey has been marked by a steadfast commitment to learning and embracing challenges.
+          <br/>
+          I thrive on the thrill of turning ideas into functional, user-centric applications, 
+          with a keen eye for both front-end aesthetics and back-end intricacies. 
+          My toolbox includes a range of programming languages, frameworks, and a natural instinct for problem-solving. 
+          Beyond the code, I am an enthusiastic collaborator, always eager to contribute to innovative projects and 
+          share ideas with like-minded individuals. 
+          My mission is to continuously evolve, adapt, and make a meaningful impact in the ever-evolving landscape of technology. 
+          Let's connect, collaborate, and build something extraordinary together.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
