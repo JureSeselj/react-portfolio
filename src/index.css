@@ -46,10 +46,10 @@ body {
 
 /* GENERAL STYLES */
 .container {
-    width: var(--container-width-lg);
-    margin: 0 auto;
-  }
-  
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -57,39 +57,40 @@ h4,
 h5 {
   font-weight: 500;
 }
-  
+
 h1 {
   font-size: 2.5rem;
 }
-  
+
 section {
-  margin-top: 8rem;
+  margin-top: 7rem;
+  padding-top: 1rem;
 }
-  
+
 section > h2,
 section > h5 {
   text-align: center;
   color: var(--color-light);
 }
-  
+
 section > h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
 }
-  
+
 .text-light {
   color: var(--color-light);
 }
-  
+
 a {
   color: var(--color-primary);
   transition: var(--transition);
 }
-  
+
 a:hover {
   color: var(--color-white);
 }
-  
+
 .btn {
   width: max-content;
   display: inline-block;
@@ -100,36 +101,35 @@ a:hover {
   border: 1px solid var(--color-primary);
   transition: var(--transition);
 }
-  
+
 .btn:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
 }
-  
+
 .btn-primary {
   background: var(--color-primary);
   color: var(--color-bg);
 }
-  
+
 img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
-  
-  /* MEDIA QUERIES (MEDIUM DEVICES) */
+
+/* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
   section {
     margin-top: 6rem;
-    padding-top: 2rem;
   }
 }
-  
-  /* MEDIA QUERIES (SMALL DEVICES) */
+
+/* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
