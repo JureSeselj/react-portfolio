@@ -1,21 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
-import { useRef } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef()
+  const [emailIsSent, setEmailIsSent] = useState(false);
 
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_xk550kf', 'template_cxs07cg', form.current, '-TblK8YUhQRb0XcCu')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+      emailjs.sendForm('service_xk550kf', 'template_cxs07cg', e.target, '-TblK8YUhQRb0XcCu')
+      .then(() => {
+        setEmailIsSent(true);
+      });
       e.target.reset()
     };
     return (
@@ -40,14 +37,24 @@ const Contact = () => {
             </article>
           </div>
           {/* END OF CONTACT OPTIONS */}
-          <form ref={form} onSubmit={sendEmail}>
+        {emailIsSent ? (
+          <h2 id="Contact__sent-message">
+            Your Message was successfully sent!
+          </h2>
+        ) : (
+          <form onSubmit={sendEmail}>
             <input
               type="text"
               name="name"
               placeholder="Your Full Name"
               required
             />
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
             <textarea
               name="message"
               rows="7"
@@ -57,9 +64,10 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-        </div>
-      </section>
-    );
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
